@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p>Name is {{ename | upper}}</p>
+        <p>Name is {{ename | lower}}</p>
+        <p>Name is {{ename | capfirst}}</p>
+        <p>Name is {{ename | title}}</p>
+
+        {% for s in sal %}
+        <p>Salary is {{s | add:"2000"}}</p>
+        {% endfor %}
+
+        {% now "D M Y" %}
+        {% for s in sal %}
+        <h2 style='background-color:{% cycle 'red' 'blue' %}'>
+            {{s}}
+            </h2>
+            {% endfor %}
+    </body>
+</html>-*

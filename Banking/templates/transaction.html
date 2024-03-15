@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <form action="/addrec">
+            <table>
+                <tr>
+                    <td>Select Transaction Date</td>
+                    <td><input type="date" name="txdate"></td>
+                </tr>
+                <tr>
+                    <td>Enter Transaction Type</td>
+                    <td><input type="text" name="txtype" size="20">(deposit/withdraw)</td>
+                </tr>
+                <tr>
+                    <td>Enter Amount</td>
+                    <td><input type="number" name="amt"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit"></td>
+                </tr>
+                <a href="/ministatement">Check Mini Statement</a>
+            </table>
+            {{msg}}
+        </form>
+    </body>
+</html>

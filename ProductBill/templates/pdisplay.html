@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Order No.</th>
+                <th>Order Date</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity Ordered</th>
+            </tr>
+            {% for e in porder %}
+            <tr>
+                <td>{{e.0}}</td>
+                <td>{{e.1}}</td>
+                <td>{{e.2}}</td>
+                <td>{{e.3}}</td>
+                <td>{{e.4}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

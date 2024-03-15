@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h2 align="center">Login Page</h2>
+        {% if flag == 0 %}
+        <h2>You are logged in</h2>
+        UserName : {{request.user.username}}<br>
+        FirstName : {{request.user.first_name}}<br>
+        LastName : {{request.user.last_name}}<br>
+        {% else %}
+        <h2>You are not logged in</h2>
+        {% endif %}
+        <br><hr><br>
+        <form method="post">
+            {% csrf_token %}
+            <table align="center">
+                <tr><td>Username<td><input type="text" name="uname" size="30"></tr>
+                <tr><td>Password<td><input type="password" name="password" size="30"></tr>
+                <tr><td colspan="2"><input type="submit" value="Login Here"></tr>
+            </table>
+          
+        </form>
+        <br><hr><br>
+               
+    </body>
+</html>

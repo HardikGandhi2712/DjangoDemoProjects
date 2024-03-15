@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h2>User Resgistration</h2>
+        {% if flag == 0 %}
+        <h2>You are logged in</h2>
+        UserName : {{request.user.username}}<br>
+        FirstName : {{request.user.first_name}}<br>
+        LastName : {{request.user.last_name}}<br>
+        <a href={% url "logout_user" %}>Logout</a>
+        {% else %}
+        <h2>You are not logged in</h2>
+        <h2>
+        <a href={% url "register" %}>Register</a>&emsp;
+        <a href={% url "login_user" %}>Login</a>
+        </h2>
+        {% endif %} 
+</body>
+</html>
+    </body>
+</html>

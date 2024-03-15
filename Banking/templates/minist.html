@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Mini Statement {{acno}}</h1>
+        <table border="1">
+            <tr>
+                <th>Tx ID</th>
+                <th>Tx Date</th>
+                <th>Tx type</th>
+                <th>Tx Amount</th>
+            </tr>
+            {% for r in rec %}
+            <tr>
+                <td>{{r.0}}</td>
+                <td>{{r.1}}</td>
+                <td>{{r.3}}</td>
+                <td>{{r.4}}</td>
+            </tr>
+            {% endfor %}  
+        </table>
+        <h2>Total Available balance={{abal}}</h2>
+    </body>
+</html>

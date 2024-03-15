@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <table border="100px">
+        <th>Product</th>
+        <th>Price</th>
+        {% for p in product %}
+        <tr>
+        <td>{{ p.0 }}</td> 
+        <td>{{ p.1 }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+        {% for p in product %} 
+        {% if p.1 < 50000 %}
+        <h2 style='background-color:{% cycle 'red' 'blue' %}'>
+        {{ p.0 }}  {{ p.1 }}
+        </h2>
+        {% endif %}
+        {% endfor %}
+
+        {% for p in product %} 
+        {% if p.1 > 50000 %}
+        <h2 style='background-color:{% cycle 'yellow' 'brown' %}'>
+        {{ p.0 }}  {{ p.1 }}
+        </h2>
+        {% endif %}
+        {% endfor %}
+        
+    </body>
+</html>

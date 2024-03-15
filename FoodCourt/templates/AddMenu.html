@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <form method="post" action="/insertmenu/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                <tr><td>Enter Menu Name</td><input type="text" name="menuname" size="20"></tr>
+                <tr><td>Enter Category</td><input type="text" name="category" size="20"></tr>
+                <tr><td>Select Photo</td><input type="file" name="photo"></tr>
+                <tr><td>Enter Rate</td><input type="number" name="rate" size="20"></tr>
+                <tr><td></td><input type="submit" value="Add Menu"></tr>
+            </table>
+        </form>
+        {{msg}}
+    </body>
+</html>

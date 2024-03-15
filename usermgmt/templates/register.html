@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h2 align="center">User Registration</h2><hr><br>
+        <form method="POST">
+            {% csrf_token %}
+            <table align="center">
+                <tr><td> UserName <td> <input type="text" name="uname" size="30"></tr>
+                <tr><td> FirstName <td> <input type="text" name="fname" size="30"></tr>
+                <tr><td> LastName <td> <input type="text" name="lname" size="30"></tr>
+                <tr><td> Email <td> <input type="email" name="email" size="30"></tr>
+                <tr><td> Password <td> <input type="password" name="password" size="30"></tr>
+                <tr><td> Confirm Password <td> <input type="password" name="cpass" size="30"></tr>
+                <tr><td colspan="2"><input type="submit" value="Register"></td></tr>
+                </tr>
+            </table>
+        </form><br><hr>
+        {{msg}}
+        
+    </body>
+</html>

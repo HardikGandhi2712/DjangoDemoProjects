@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Menu Id</th>
+                <th>Menu Name</th>
+                <th>Category</th>
+                <th>Rate</th>
+                <th>Photo Path</th>
+                <th>Photo</th>
+            </tr>
+
+                {% for e in menu %}
+                <tr>
+                    <td>{{e.id}}</td>
+                    <td>{{e.menuname}}</td>
+                    <td>{{e.category}}</td>
+                    <td>{{e.rate}}</td>
+                    <td>{{e.photo}}</td>
+                    <td><img src="/image/{{e.photo}}" height="150" width="200"></td>
+                </tr>
+                {% endfor %}
+            
+        </table>
+    </body>
+</html>
